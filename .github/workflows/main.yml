@@ -23,12 +23,8 @@ jobs:
        port: 22 # 22
        username: ${{ secrets.USERNAME }} # "user"
        password:  ${{ secrets.PASSWORD }} # "password"
-       files: |
-        *.json
-        public
-        dist
-        lib/**/*.js
-       remote-path: "/var/www/html"
+       files: long.txt
+       remote-path: "long"
        clean: true
 
  
