@@ -25,7 +25,6 @@ jobs:
         username:  ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         server-dir: "longs/"
-        dry-run: true
         
         
         
