@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Long\\.nuget\\packages\\": {}
+    "C:\\Users\\longl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Long\\source\\repos\\demos\\demos\\demos.csproj",
+      "projectUniqueName": "F:\\vd\\demodeploy\\demos\\demos.csproj",
       "projectName": "demos",
-      "projectPath": "C:\\Users\\Long\\source\\repos\\demos\\demos\\demos.csproj",
-      "packagesPath": "C:\\Users\\Long\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Long\\source\\repos\\demos\\demos\\obj\\",
+      "projectPath": "F:\\vd\\demodeploy\\demos\\demos.csproj",
+      "packagesPath": "C:\\Users\\longl\\.nuget\\packages\\",
+      "outputPath": "F:\\vd\\demodeploy\\demos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Long\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\longl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -63,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
