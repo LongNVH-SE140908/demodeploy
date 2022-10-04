@@ -21,4 +21,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: 22
-        script: type nul > filename.txt
+        script: type nul > sas.txt
