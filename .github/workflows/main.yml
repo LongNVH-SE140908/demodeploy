@@ -16,7 +16,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
-    - uses: "finnp/create-file-action@master"
+    - name: Create File
+      uses: finnp/create-file-action@1.0.0
       env:
         FILE_NAME: "dir/fileName.txt"
         FILE_DATA: "file content"
