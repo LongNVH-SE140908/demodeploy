@@ -28,7 +28,7 @@ jobs:
     - name: Copy single file to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: dir/fileName.txt
+          local: hw.txt
           remote: long.txt
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
