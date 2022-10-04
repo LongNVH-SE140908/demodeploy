@@ -11,19 +11,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy:
-    name: Deploy
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        host: ${{ secrets.HOST }}
-        user:  ${{ secrets.USERNAME }}
+        server: ${{ secrets.HOST }}
+        username:  ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        localDir: "."
-        remoteDir: "longfpts"
-        options: "--delete --asci"
+        dry-run: true
+        
+        
         
         
