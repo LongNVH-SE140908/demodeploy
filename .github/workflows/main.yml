@@ -24,5 +24,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: 22
-        source: "tests/a.txt,tests/b.txt"
+        source: "long.txt"
         target: "test"
