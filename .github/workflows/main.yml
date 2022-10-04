@@ -20,7 +20,7 @@ jobs:
     - name: Copy single file to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: README.md
+          local: long.txt
           remote: scp/single/oof.txt
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
