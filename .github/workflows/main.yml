@@ -26,5 +26,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "long.txt"
-        overwrite : "test"
+        targer : "~test"
  
