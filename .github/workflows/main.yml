@@ -22,7 +22,7 @@ jobs:
         host: ${{ secrets.HOST }}
         user:  ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        localDir: "~/long.txt"
+        localDir: "/runner/work/demodeploy/demodeploy"
         remoteDir: "longfpts"
         options: "--delete --asci"
         
