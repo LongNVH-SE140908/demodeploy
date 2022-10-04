@@ -23,6 +23,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         exclude: "[**/.git*/**, **/node_modules/**, **/build/, .README.MD, .gitignore]"
         server-dir: "asd/"
+        timeout : 999999999
         log-level: verbose
   
         
