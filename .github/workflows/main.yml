@@ -15,16 +15,14 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@master
-    - name: copy file via ssh password
-    
-      uses: ilCollez/ssh-scp-deploy@v1.1.0
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
       with:
-       host:  ${{ secrets.HOST }} # "example.com"
-       port: 22 # 22
-       username: ${{ secrets.USERNAME }} # "user"
-       password:  ${{ secrets.PASSWORD }} # "password"
-       files: long.txt
-       remote-path: "long"
-       clean: true
-
+        local: long.txt
+        remote: ~/test
+        host: ${{ secrets.HOST }}
+        port: 22
+        username: ${{ secrets.USERNAME }} # "user"
+        password:  ${{ secrets.PASSWORD }} # "password"
+    
  
