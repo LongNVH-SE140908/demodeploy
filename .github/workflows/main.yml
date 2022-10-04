@@ -32,9 +32,6 @@ jobs:
       - name: Install dependencies
         run: yarn
       
-      # Executando a build
-      - name: Run Build
-        run: yarn build
       
       # Copiar o repositório para o diretório no servidor/VPS utilizado para a aplicação
       - name: Copy dist to VPS
