@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
-    
+  
     - name: Copy single file to remote
       uses: garygrossgarten/github-action-scp@release
       with:
