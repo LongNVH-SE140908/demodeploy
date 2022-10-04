@@ -21,7 +21,7 @@ jobs:
 
      env:
  
-      HOST: YOUR_HOST_IP
+      HOST: ${{ secrets.HOST }}
 
       USERNAME: ${{ secrets.USERNAME }}
 
