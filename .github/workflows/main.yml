@@ -18,14 +18,13 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+    - name: Update files on FTP server
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        server: ftpes://longftp.${{ secrets.HOST }}
-        username:  ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        server-dir: "longs/"
-        
+          ftp-server: ${{ secrets.HOST }}
+          ftp-username: ${{ secrets.USERNAME }}
+          ftp-password: ${{ secrets.PASSWORD }}
+
         
         
         
