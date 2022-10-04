@@ -14,54 +14,17 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # O tipo de runner onde o job será executado
+    name: Build
     runs-on: ubuntu-latest
-
-    # Passos a serem exeutados na tarefa
     steps:
-      # Fazendo o check-out do repositório com o $GITHUB_WORKSPACE, para a tarefa poder acessá-lo
-      - uses: actions/checkout@v2
-      
-      # Configurando o ambiente do Node.js com a versão apropriada
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 14.x
-      
-      # Instalando as dependências com o NPM/Yarn
-      - name: Install dependencies
-        run: yarn
-      
-      
-      # Copiar o repositório para o diretório no servidor/VPS utilizado para a aplicação
-      - name: Copy dist to VPS
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: 22
-          key: ${{ secrets.REMOTE_SSH_KEY }}
-          # Selecionando todas as pastas com exceção do "node_modules"
-          source: ".,!node_modules"
-          # O caminho é baseado no diretório onde o usuário logado no servidor inicia
-          target: "~/app/gobarber-backend"
-      
-      # Acessando o servidor via SSH e executando os comandos
-      - name: Instal dependencies on VPS, run migrations on VPS and restart Node server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: 22
-          key: ${{ secrets.REMOTE_SSH_KEY }}
-          # Definindo os comandos a serem executados
-          # Executar "yarn" no servidor
-          # Executar as migrations do TypeORM
-          # Restart no servidor Node.js
-          script: |
-            cd ~/app/gobarber-backend
-            yarn
-            ./node_modules/.bin/typeorm migration:run
-            pm2 restart gobarber-api
-
+    - uses: actions/checkout@master
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "long.txt"
+        overwrite : "test"
  
