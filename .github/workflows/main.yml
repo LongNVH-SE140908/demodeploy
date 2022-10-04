@@ -40,7 +40,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: 22
-          key: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
           # Selecionando todas as pastas com exceção do "node_modules"
           source: ".,!node_modules"
           # O caminho é baseado no diretório onde o usuário logado no servidor inicia
@@ -53,7 +53,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: 22
-          password:  ${{ secrets.PASSWORD }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
           # Definindo os comandos a serem executados
           # Executar "yarn" no servidor
           # Executar as migrations do TypeORM
