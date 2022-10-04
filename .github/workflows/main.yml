@@ -22,8 +22,8 @@ jobs:
         host: ${{ secrets.HOST }}
         user:  ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        localDir: "."
-        remoteDir: "longfpt"
+        localDir: "~/long.txt"
+        remoteDir: "longfpts"
         options: "--delete --asci"
         
         
