@@ -22,7 +22,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         exclude: "[**/.git*/**, **/node_modules/**, **/build/, .README.MD, .gitignore]"
-        protocol: ftps
         server-dir: "asd/"
         log-level: verbose
   
