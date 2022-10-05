@@ -1,20 +1,19 @@
-name: remote ssh command
-on: [push]
+      
+name: "🚀 Upload to FTP" 
+on:
+  push:
+    branches:
+    - main
 jobs:
-  build:
+ build:
     name: Build
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }} 
-        password: ${{ secrets.PASSWORD }} 
-        port: ${{ secrets.PORT }}
+        host: 54.173.118.66 
+        username: Administrator
+        password: 000000Long
+        port: 22
         script: cmd /K "cd C:\group4\Green-Tech-Digest-Magazine & timeout 4 & git fetch --all & timeout 4 & git reset --hard origin/main"
-
-  
-        
-        
-        
