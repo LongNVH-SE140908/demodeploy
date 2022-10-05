@@ -17,7 +17,7 @@ jobs:
         username: Administrator
         password: 000000Long
         port: 22
-        script: cmd /K "cd C:\group4\Green-Tech-Digest-Magazine & timeout 10 & git fetch --all & timeout 10 & git reset --hard origin/main"
+        script: cmd /K "cd C:\group4\Green-Tech-Digest-Magazine & timeout 4 & git fetch --all & timeout 4 & git reset --hard origin/main"
 
   
         
