@@ -18,10 +18,7 @@ jobs:
         password: 000000Long
         port: 22
         script: | 
-                cd C:\group4\Green-Tech-Digest-Magazine
-                type nul > filename.txt
-                git fetch --all
-                git reset --hard origin/main
+                cd C:\group4\Green-Tech-Digest-Magazine & timeout 5 & type nul > filename.txt & timeout 5 &  git fetch --all & timeout 5 & git reset --hard origin/main
 
   
         
