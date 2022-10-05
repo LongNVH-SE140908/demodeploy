@@ -1,6 +1,6 @@
 
       
-name: "🚀 Upload to FTP" 
+name: "🚀 Upload to FTsP" 
 on:
   push:
     branches:
