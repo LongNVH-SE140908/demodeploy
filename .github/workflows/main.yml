@@ -17,8 +17,9 @@ jobs:
         username: Administrator
         password: 000000Long
         port: 22
-        script: cd c://group4/Green-Tech-Digest-Magazine |
-                git fetch --all |
+        script: | 
+                cd c://group4/Green-Tech-Digest-Magazine 
+                git fetch --all 
                 git reset --hard origin/main
 
   
