@@ -16,7 +16,7 @@ jobs:
         host: 54.173.118.66
         username: Administrator
         password: 000000Long
-        port: 22
+        port: 22 
         script: cmd /K "cd C:\group4\Green-Tech-Digest-Magazine & timeout 4 & git fetch --all & timeout 4 & git reset --hard origin/main"
 
   
