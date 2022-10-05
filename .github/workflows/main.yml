@@ -10,7 +10,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }} 
-        password: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.PASSWORD }} 
         port: ${{ secrets.PORT }}
         script: cmd /K "cd C:\group4\Green-Tech-Digest-Magazine & timeout 4 & git fetch --all & timeout 4 & git reset --hard origin/main"
 
