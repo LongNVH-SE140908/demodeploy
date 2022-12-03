@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: 54.173.118.66 
+        server: 171.226.46.36
         username: Long
         password: 000000Long
        
